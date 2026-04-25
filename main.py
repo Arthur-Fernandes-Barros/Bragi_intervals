@@ -25,29 +25,30 @@ def campoharmonico(tonica):
             formatar(f"{notas[posicao - 8]}m", "III"),
             formatar(notas[posicao - 7], "IV"),
             formatar(notas[posicao - 5], "V"),
-            formatar(f"{notas[posicao - 3]}m", "VI"),
+            formatar(f"{notas[posicao - 3]}°", "VI"),
             formatar(f"{notas[posicao - 1]}m", "VII")
         ])
 
         menor = " | ".join([
             formatar(f"{notas[posicao]}m", "I"),
-            formatar(notas[posicao - 10], "II"),
-            formatar(f"{notas[posicao - 9]}m", "III"),
-            formatar(notas[posicao - 7], "IV"),
-            formatar(notas[posicao - 5], "V"),
-            formatar(f"{notas[posicao - 4]}m", "VI"),
+            formatar(f"{notas[posicao - 10]}°", "II"),
+            formatar(f"{notas[posicao - 9]}", "III"),
+            formatar(f"{notas[posicao - 7]}m", "IV"),
+            formatar(f"{notas[posicao - 5]}m", "V"),
+            formatar(f"{notas[posicao - 4]}", "VI"),
             formatar(notas[posicao - 2], "VII")
         ])
 
         rel_pos = (posicao - 3) % 12
         relativo = " | ".join([
-            formatar(f"{notas[rel_pos]}m", "I"),
-            formatar(notas[(rel_pos - 10) % 12], "II"),
-            formatar(f"{notas[(rel_pos - 9) % 12]}m", "III"),
-            formatar(notas[(rel_pos - 7) % 12], "IV"),
-            formatar(notas[(rel_pos - 5) % 12], "V"),
-            formatar(f"{notas[(rel_pos - 4) % 12]}m", "VI"),
-            formatar(notas[(rel_pos - 2) % 12], "VII")
+            formatar(f"{notas[posicao - 3]}m", "I"),
+            formatar(f"{notas[posicao - 1]}°", "II"),
+            formatar(notas[posicao], "III"),
+            formatar(f"{notas[posicao - 10]}m", "IV"),
+            formatar(f"{notas[posicao - 8]}m", "V"),
+            formatar(notas[posicao - 7], "VI"),
+            formatar(notas[posicao - 5], "VII")
+
         ])
 
         # Exibição usando markdown com suporte a HTML
