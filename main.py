@@ -25,8 +25,8 @@ def campoharmonico(tonica):
             formatar(f"{notas[posicao - 8]}m", "III"),
             formatar(notas[posicao - 7], "IV"),
             formatar(notas[posicao - 5], "V"),
-            formatar(f"{notas[posicao - 3]}°", "VI"),
-            formatar(f"{notas[posicao - 1]}m", "VII")
+            formatar(f"{notas[posicao - 3]}m", "VI"),
+            formatar(f"{notas[posicao - 1]}°", "VII")
         ])
 
         menor = " | ".join([
